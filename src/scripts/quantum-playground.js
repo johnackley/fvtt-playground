@@ -1,13 +1,15 @@
 class QuantumPlayground extends Application {
     constructor (options = {}){
         super(options);
-        
         this._initHooks();
     }
 
     _initHooks() {
         // Hooks.on("init", () => {CONFIG.debug.hooks = true})
-        
+        Hooks.on("ready", function() {
+            console.log("Quantum Playground: ready hook");
+        });
+                
         // Hooks.on("getActorDirectoryFolderContext", (html, list) => {
         //     list.push({
         //         name: "Quantum Playground",
@@ -50,13 +52,6 @@ class QuantumPlayground extends Application {
 
 }
 
-console.log("Hello World! Quantum Playground");
-
 Hooks.on('init', () => {
-    console.log("init hook: Quantum Playground");
     new QuantumPlayground({type:"directory"});
-});
-
-Hooks.on("ready", function() {
-    console.log("ready hook: Quantum Playground");
 });
