@@ -6,7 +6,8 @@ class QuantumPlayground extends Application {
     }
 
     _initHooks() {
-        Hooks.on("init", () => {CONFIG.debug.hooks = true})
+        // Hooks.on("init", () => {CONFIG.debug.hooks = true})
+        
         // Hooks.on("getActorDirectoryFolderContext", (html, list) => {
         //     list.push({
         //         name: "Quantum Playground",
@@ -42,17 +43,20 @@ class QuantumPlayground extends Application {
      * Override Submit handler to begin import
      */
     _onSubmit(ev){
-        ev.preventDefault();
-        this._startImport();
-        this.close();
+        // ev.preventDefault();
+        // this._startImport();
+        // this.close();
     }
 
 }
 
-/**
- * Create ActorImporter
- */
+console.log("Hello World! Quantum Playground");
+
 Hooks.on('init', () => {
-    // TODO has permission?
+    console.log("init hook: Quantum Playground");
     new QuantumPlayground({type:"directory"});
+});
+
+Hooks.on("ready", function() {
+    console.log("ready hook: Quantum Playground");
 });
