@@ -1,20 +1,22 @@
-class ActorImporter extends Application {
+class QuantumPlayground extends Application {
     constructor (options = {}){
         super(options);
+        
         this._initHooks();
     }
 
     _initHooks() {
-        Hooks.on("getActorDirectoryFolderContext", (html, list) => {
-            list.push({
-                name: "Quantum Playground",
-                icon: "<i class='fas fa-user-friends'></i>",
-                callback: async directory => {
-                    this.ParentDirectoryId = directory.parent().attr("data-folder-id");
-                    this.render(true);
-                }
-            })
-        })
+        Hooks.on("init", () => {CONFIG.debug.hooks = true})
+        // Hooks.on("getActorDirectoryFolderContext", (html, list) => {
+        //     list.push({
+        //         name: "Quantum Playground",
+        //         icon: "<i class='fas fa-user-friends'></i>",
+        //         callback: async directory => {
+        //             this.ParentDirectoryId = directory.parent().attr("data-folder-id");
+        //             this.render(true);
+        //         }
+        //     })
+        // })
     }    
 
     /**
