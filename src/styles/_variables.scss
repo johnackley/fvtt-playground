@@ -1,0 +1,31 @@
+$primary: #aaa;
+$secondary: #293133;
+$accent: #dfe6f5;
+$accent-alt: #dfe6f5;
+$background: #dfe6f5;
+$background-alt: #dfe6f5;
+
+$decorative-line: 1px solid $accent;
+$section-border: 1px groove $accent-alt;
+
+%header-field {
+  padding: 5px;
+  margin-bottom: 5px;
+  background: $background;
+  border: $decorative-line;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+  .header-field-add {
+    flex-grow: 0;
+    flex-basis: 15px;
+  }
+}
+
+%standalone-input-field {
+  //background: #a1b3c9;
+  //background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  border-radius: 2px;
+}

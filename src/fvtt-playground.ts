@@ -1,13 +1,8 @@
 /**
- * This is your TypeScript entry file for Foundry VTT.
- * Register custom settings, sheets, and constants using the Foundry API.
- * Change this heading to be more descriptive to your module, or remove it.
- * Author: [your name]
- * Content License: [copyright and-or license] If using an existing system
- * 					you may want to put a (link to a) license or copyright
- * 					notice here (e.g. the OGL).
- * Software License: [your license] Put your desired license here, which
- * 					 determines how others may use and modify your module
+ * Quantum Playground to learn FVTT development
+ * Author: John Ackley
+ * Content License: none.
+ * Software License: none.
  */
 
 // Import TypeScript modules
@@ -19,7 +14,7 @@ import { preloadTemplates } from './module/preloadTemplates.js';
 /* ------------------------------------ */
 Hooks.once('init', async function() {
 	console.log('fvtt-playground | Initializing fvtt-playground');
-
+	
 	// Assign custom classes and constants here
 	
 	// Register custom module settings
@@ -35,15 +30,29 @@ Hooks.once('init', async function() {
 /* Setup module							*/
 /* ------------------------------------ */
 Hooks.once('setup', function() {
-	// Do anything after initialization but before
-	// ready
+	console.log('fvtt-playground | setup');
 });
 
 /* ------------------------------------ */
 /* When ready							*/
 /* ------------------------------------ */
 Hooks.once('ready', function() {
-	// Do anything once the module is ready
+	console.log('fvtt-playground | ready');
 });
 
 // Add any additional hooks if necessary
+Hooks.on('pauseGame', function() {
+	console.log('fvtt-playground | pauseGame');
+})
+
+Hooks.on('renderChatMessage', function() {
+	console.log('fvtt-playground | pauseGame');
+})
+
+Hooks.on('targetToken', function() {
+	console.log('fvtt-playground | targetToken');
+})
+
+Hooks.on('chatMessage', function() {
+	console.log('fvtt-playground | chatMessage');
+})
