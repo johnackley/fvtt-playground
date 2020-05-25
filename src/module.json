@@ -1,0 +1,27 @@
+{
+  "version": "0.0.4",
+  "name": "quantum-playground",
+  "title": "Quantum Playground",
+  "description": "Quantum Playground is my platform for learning FoundtyVTT development.",
+  "author": "johnackley",
+  "minimumCoreVersion": "0.5.0",
+  "url": "https://github.com/johnackley/fvtt-playground",
+  "manifest": "https://raw.githubusercontent.com/johnackley/fvtt-playground/master/module.json",
+  "download": "https://github.com/johnackley/fvtt-playground/archive/master.zip",
+  "scripts": [],
+  "esmodules": [
+    "fvtt-playground.js"
+  ],
+  "styles": [
+    "fvtt-playground.css"
+  ],
+  "packs": [
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ]
+}
